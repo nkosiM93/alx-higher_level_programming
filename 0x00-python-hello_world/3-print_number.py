@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 98
+number = hjkjuiyuyu
 print(f'{number} Battery street')
