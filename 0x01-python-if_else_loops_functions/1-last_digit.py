@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 import random
-number = random.randint(-10000, 10000)
-
-'''if number < 0:
-    number /= -1'''  # Make the number positive first
+number = -78  # random.randint(-10000, 10000)
 
 ld = number % 10  # Last digit
 
