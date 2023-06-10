@@ -5,7 +5,7 @@ a = "arguments"
 if __name__ == "__main__":
     import sys
 
-    args = len(sys.argv) - 1 
+    args = len(sys.argv) - 1
     if args == 1:
         print("{:d} argument:".format(args))
     else:
@@ -14,7 +14,7 @@ if __name__ == "__main__":
             print('.')
             exit()
         print(":")
-    
+
     for i, v in enumerate(sys.argv):
         if i == 0:
             continue
