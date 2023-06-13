@@ -13,3 +13,6 @@ def divisible_by_2(my_list=[]):
             new_lst.append(False)
 
     return new_lst
+    # Below is a smarter option, more redeable
+    #my_list.sort()
+    #return(my_list[-1])
