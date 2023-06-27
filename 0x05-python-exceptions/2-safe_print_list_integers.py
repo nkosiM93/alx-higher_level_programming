@@ -7,10 +7,10 @@ def safe_print_list_integers(my_list=[], x=0):
         if i < x:
             try:
                 print("{:d}".format(j), end="")
-                count =+ 1
-            except (ValueError):
+                count += 1
+            except ValueError:
                 pass
-            except (IndexError):
+            except IndexError:
                 raise
     print()
     return count
