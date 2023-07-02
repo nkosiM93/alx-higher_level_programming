@@ -3,15 +3,15 @@
 
 
 class Sqaure:
-    """Square dimesnsions
-        
-        Attributes:
-            size(int): The dimension of one side
+    """Defines a Square"""
+
+    def __init__(self, size=0):
+        """Defines the dimensions of the square
 
         Args:
             size(int): The dimension of one side
-    """
-    def __init__(self, size=0):
+        """
+
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
