@@ -18,10 +18,12 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
+    @property
     def size(self):
         """Gets/returns the size attribute"""
         return self.__size
 
+    @size.setter
     def size(self, size=0):
         """Defines the dimensions of the square
 
