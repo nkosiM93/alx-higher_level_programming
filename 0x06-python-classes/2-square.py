@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Definess a square"""
+
+
 class Square:
     """Checks if szie is an integer ir not, otherwise
             throws an exception"""
