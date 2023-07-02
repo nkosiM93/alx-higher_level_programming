@@ -4,6 +4,9 @@
 
 class Sqaure:
     """Square dimesnsions
+        
+        Attributes:
+            size(int): The dimension of one side
 
         Args:
             size(int): The dimension of one side
