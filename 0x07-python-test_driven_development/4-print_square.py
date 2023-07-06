@@ -4,7 +4,7 @@
 
 def print_square(size):
     """Prints the square of a number using '#'
-        
+
         Args:
             size(int): The number whose square must be printed
     """
@@ -18,4 +18,3 @@ def print_square(size):
         for j in range(size):
             print("#", end="")
         print()
-
