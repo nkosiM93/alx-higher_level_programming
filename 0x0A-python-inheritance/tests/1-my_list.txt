@@ -53,3 +53,12 @@ inherits from the list class.
  
 >>> myLi.print_sorted()
 [-1254, -142, -14, -12, 0]
+
+>>> myLi.clear()
+>>> myLi.append(-1254)
+>>> myLi.append(-12)
+>>> myLi.append(12)
+>>> myLi = myLi.print_sorted()
+[-1254, -12, 12]
+>>> print(myLi)
+[-1254, -12, 12]
