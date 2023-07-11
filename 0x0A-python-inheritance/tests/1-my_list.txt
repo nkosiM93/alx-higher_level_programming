@@ -1,0 +1,55 @@
+This is the test file for our MyList class which
+inherits from the list class.
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> myLi = MyList()
+>>> myLi.append(9)
+>>> myLi.append(8)
+>>> myLi.append(4)
+>>> myLi.append(44)
+>>> myLi.append(40)
+>>> myLi.append(-40)
+>>> myLi.append(0)
+>>> myLi.append(-0)
+
+>>> print(myLi)
+[9, 8, 4, 44, 40, -40, 0, 0]
+
+>>> myLi.print_sorted()
+[-40, 0, 0, 4, 8, 9, 40, 44]
+
+>>> print(myLi)
+[9, 8, 4, 44, 40, -40, 0, 0]
+
+>>> myLi.pop()
+0
+
+>>> print(myLi)
+[9, 8, 4, 44, 40, -40, 0]
+
+>>> myLi.insert(2, 700)
+>>> print(myLi)
+[9, 8, 700, 4, 44, 40, -40, 0]
+
+>>> myLi.print_sorted()
+[-40, 0, 4, 8, 9, 40, 44, 700]
+
+>>> myLi.reverse()
+>>> print(myLi)
+[0, -40, 40, 44, 4, 700, 8, 9]
+
+>>> myLi.clear()
+>>> print(myLi)
+[]
+
+>>> myLi.append(-0)
+>>> myLi.append(-1254)
+>>> myLi.append(-12)
+>>> myLi.append(-142)
+>>> myLi.append(-14)
+>>> print(myLi)
+[0, -1254, -12, -142, -14]
+ 
+>>> myLi.print_sorted()
+[-1254, -142, -14, -12, 0]
