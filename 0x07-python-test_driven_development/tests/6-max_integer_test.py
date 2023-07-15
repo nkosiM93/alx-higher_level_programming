@@ -19,3 +19,7 @@ class TestMaxInt(unittest.TestCase):
         self.assertEqual(max_integer([-1, 0, -4, -3]), 0)
     def testFour(self):
         self.assertEqual(max_integer([-1, 0, ord('A'), -3]), 65)
+    def testBeg(self):
+        self.assertEqual(max_integer([6, 3, 0, -9]), 6)
+    def testEnd(self):
+        self.assertEqual(max_integer([6]), 6)
