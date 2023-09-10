@@ -6,7 +6,6 @@ of a number using the hash symbol
 ##
 ##
 >>> print_square(0)
-
 >>> print_square(-1)
 Traceback (most recent call last):
 ValueError: size must be >= 0
@@ -23,7 +22,6 @@ TypeError: size must be an integer
 Traceback (most recent call last):
 TypeError: print_square() missing 1 required positional argument: 'size'
 >>> print_square(-0)
-
 >>> print_square(0.3)
 Traceback (most recent call last):
 TypeError: size must be an integerTypeError: size must be an integer
