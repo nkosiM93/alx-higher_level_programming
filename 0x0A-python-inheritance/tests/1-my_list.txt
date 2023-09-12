@@ -1,0 +1,48 @@
+This file contains test cases for a class that inherits from the list 
+class.
+=====================================================================
+
+>>> MyList = __import__("1-my_list").MyList
+>>> myList = MyList()
+>>> myList.append(2)
+>>> myList.append(7)
+>>> myList.append(0)
+>>> myList.append(45)
+>>> myList.append(8956)
+>>> myList.append(-56)
+>>> print(myList)
+[2, 7, 0, 45, 8956, -56]
+
+>>> myList.print_sorted()
+[-56, 0, 2, 7, 45, 8956]
+
+>>> myList.clear()
+>>> print(myList)
+[]
+
+>>> myList.append(-56)
+>>> myList.append(-55)
+>>> myList.append(-1)
+>>> myList.append(0)
+>>> myList.append(-2)
+>>> myList.print_sorted()
+[-56, -55, -2, -1, 0]
+
+>>> myList.clear()
+>>> myList.append(-1)
+>>> myList.append(-5)
+>>> myList.append(-88)
+>>> myList.append(-0)
+>>> myList.append(-1)
+>>> myList.print_sorted()
+[-88, -5, -1, -1, 0]
+
+>>> print(myList)
+[-1, -5, -88, 0, -1]
+
+>>> myList.remove(-0)
+>>> print(myList)
+[-1, -5, -88, -1]
+
+>>> myList.print_sorted()
+[-88, -5, -1, -1]
