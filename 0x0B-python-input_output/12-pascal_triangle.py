@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-"""Moudule Implements PAscal's Triange using integers"""
-
 
 def pascal_triangle(n):
-    """Function implements PAscal's Triange using integers. Tri has n rows"""
     co = 1
     ce = 0
     count = 1
@@ -13,6 +10,8 @@ def pascal_triangle(n):
     end = 1
     ls = []
 
+    if n <= 0:
+        return []
     while count <= n:
         row = []
         row.append(st)
