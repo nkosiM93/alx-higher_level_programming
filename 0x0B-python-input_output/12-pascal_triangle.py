@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""Module has function for Pascal's Triange"""
 
 def pascal_triangle(n):
+    """Function implements Pascal's Traingle using integers"""
     co = 1
     ce = 0
     count = 1
