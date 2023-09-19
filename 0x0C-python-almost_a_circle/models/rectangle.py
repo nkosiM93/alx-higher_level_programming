@@ -15,32 +15,48 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Gets width"""
+        
         return self.__width
 
     @width.setter
     def set_width(self, w):
+        """Sets width"""
+        
         self.__width = w
 
     @property
     def height(self):
+        """Gets width"""
+        
         return self.__height
 
     @height.setter
     def set_height(self, h):
+        """Sets width"""
+        
         self.__height = h
 
     @property
     def x(self):
+        """ Sets width"""
+        
         return self.__x
 
     @x.setter
     def set_height(self, x):
+        """ Sets width"""
+        
         self.__x = x
 
     @property
     def y(self):
+        """ Sets width"""
+
         return self.__y
 
     @y.setter
     def set_height(self, y):
+        """ Sets width"""
+
         self.__y = y
