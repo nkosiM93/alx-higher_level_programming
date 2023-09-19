@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Contains a rectangle class"""
-Base = __import__("base").Base
+from models.base import Base
 
 
 class Rectangle(Base):
