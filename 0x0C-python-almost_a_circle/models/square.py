@@ -11,8 +11,7 @@ class Square(Rectangle):
 
     def __str__(self):
         return (f"[{self.__class__.__name__}] ({self.id}) "
-                f"{self.x}/{self.y} - {self.width}/{self.height} "
-                f"- {self.size}")
+                f"{self.x}/{self.y} - {self.size}")
 
     @property
     def size(self):
@@ -26,3 +25,13 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Updates object attributes"""
+        list_attr = ['id', 'size', 'x', 'y']
+        if args is not None and not len(args) == 0:
+            for a in range(len(args)):
+                setattr(self, list_attr[a], args[a])
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
