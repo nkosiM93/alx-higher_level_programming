@@ -8,6 +8,6 @@ while (process.argv[ind]) {
   }
   ind++;
 }
-if (ind < 2) {
+if (ind < 3) {
   console.log('No argument');
 }
