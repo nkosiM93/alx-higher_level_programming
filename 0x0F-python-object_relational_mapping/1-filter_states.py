@@ -10,7 +10,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     cur.execute(f"USE {sys.argv[3]}")
-    cur.execute("SELECT * FROM states WHERE LEFT(name, 1) = 'N'"
+    cur.execute("SELECT * FROM states WHERE BINARY LEFT(name, 1) = 'N'"
                 "ORDER BY id ASC")
     rows = cur.fetchall()
 
