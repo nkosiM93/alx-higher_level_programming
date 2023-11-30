@@ -10,8 +10,8 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     cur.execute(f"USE {sys.argv[3]}")
-    cur.execute(f"SELECT * FROM states WHERE BINARY name = {sys.argv[4]} "
-                "ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE BINARY name = {:s} "
+                "ORDER BY id ASC".format(sys.argv[4]))
     rows = cur.fetchall()
 
     for row in rows:
