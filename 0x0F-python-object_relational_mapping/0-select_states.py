@@ -3,7 +3,7 @@
 import MySQLdb
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", user="root", passwd="root", db="hbtn_0e_0_usa")
+    db = MySQLdb.connect(host="localhost:3306", user="root", passwd="root", db="hbtn_0e_0_usa")
     cur = db.cursor()
 
     cur.execute("USE hbtn_0e_0_usa")
