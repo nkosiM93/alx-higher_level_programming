@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """ Module uses MySQLdb to connect to a database and retrieve info """
 import MySQLdb
+import sys
+
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost:3306", user="root", passwd="root", db="hbtn_0e_0_usa")
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
 
-    cur.execute("USE hbtn_0e_0_usa")
+    cur.execute(f"USE {sys.argv[3]}")
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cur.fetchall()
 
