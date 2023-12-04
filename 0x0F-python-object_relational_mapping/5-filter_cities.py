@@ -17,5 +17,4 @@ if __name__ == "__main__":
             print(f"{cities[j][i]}", end="")
             if j != len(cities) - 1:
                 print(", ", end="")
-            else:
-                print()
+    print()
