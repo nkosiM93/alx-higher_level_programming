@@ -15,11 +15,11 @@ if __name__ == "__main__":
     session = Session()
     states = session.query(State).order_by(State.id)
 
-    if states:
-        for state in states:
-            if sys.argv[4] == state.name:
-                print(f"{state.id}")
-                sys.exit()
-        print("Not Found")
-    else:
-        print()
+    found = False
+    for state in session.query(State):
+        if state.name == sys.argv[4]:
+            print("{}".format(state.id))
+            found = True
+            break
+    if found is False:
+        print("Not found")
