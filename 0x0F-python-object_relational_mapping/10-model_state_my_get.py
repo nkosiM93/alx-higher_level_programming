@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Prints results that contain the letter 'a'"""
+"""Prints State object with same name as passed from command line"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -17,7 +17,9 @@ if __name__ == "__main__":
 
     if states:
         for state in states:
-            if 'a' in state.name:
-                print(f"{state.id}: {state.name}")
+            if sys.argv[4] == state.name:
+                print(f"{state.id}")
+                sys.exit()
+        print("Not Found")
     else:
         print()
