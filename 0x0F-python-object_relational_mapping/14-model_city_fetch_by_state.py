@@ -21,7 +21,4 @@ if __name__ == "__main__":
     if ns:
         for n, i, sn in ns:
             print(f"{sn}: ({i}) {n}")
-    else:
-        print("Not found")
-
     session.close()
