@@ -2,6 +2,8 @@
 
 """
 Module creates a State object
+Module creates a State object
+Module creates a State object
 """
 
 from sqlalchemy import Column, create_engine, Integer, String
@@ -13,7 +15,10 @@ engine = create_engine(f"mysql+mysqldb://{sys.argv[1]}:"\
 Base = declarative_base()
 
 class State(Base):
-    """State class, represents a state"""
+    """
+    State class, represents a state
+    State class, represents a state
+    """
 
     __tablename__ = "states"
 

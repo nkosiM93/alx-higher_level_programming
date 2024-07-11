@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
 Script demonstrates how to query a database using sqlalchmey
+Script demonstrates how to query a database using sqlalchmey
+Script demonstrates how to query a database using sqlalchmey
 """
 
 import sys
