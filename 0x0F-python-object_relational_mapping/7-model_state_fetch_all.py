@@ -1,25 +1,17 @@
-#!/usr/bin/python3
-"""
-Script demonstrates how to query a database using sqlalchmey
-Script demonstrates how to query a database using sqlalchmey
-Script demonstrates how to query a database using sqlalchmey
-"""
-
-import sys
-from sqlalchemy import create_engine
+"""List all states"""
+from sys import argv
+from model_state import Base, State
+from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
-from model_state import State, Base
 
 if __name__ == "__main__":
     engine = create_engine(
-            f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}@localhost:"
-            f"3306/{sys.argv[3]}"
-            )
+        'mysql+mysqldb://{}:{}@localhost/{}'
+        .format(argv[1], argv[2],
+                argv[3]), pool_pre_ping=True)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    # The query
-    query = session.query(State).order_by(State.id)
-
-    for state in query:
-        print(f'{state.id}: {state.name}')
+    for state in session.query(State).order_by(State.id).all():
+        print("{}: {}".format(state.id, state.name))
+    session.close()
